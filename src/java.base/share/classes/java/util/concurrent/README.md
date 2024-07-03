@@ -30,8 +30,34 @@
       * sequentially
       * concurrently
 * 'java.util.concurrent.ExecutorService'
-  * TODO:
+  * := interface /
+    * vs '...Executor'
+      * async task execution: more complete
+    * allows
+      * about tasks
+        * queuing
+        * scheduling
+      * controlling shutdown
+  * subinterfaces
+    * 'java.util.concurrent.ScheduledExecutorService'
+      * := subinterface /
+        * allows
+          * about tasks
+            * delay execution
+            * periodic execution
+* 'java.util.concurrent.Future'
+  * := interface /
+    * allows
+      * determining if an execution was completed
+        * -- returns the result
+      * cancelling an execution
+  * 'java.util.concurrent.RunnableFuture'
+    * := Future /
+      * characteristics
+        * there is a method / set results | it's execution
+
 ## Implementations
+* TODO:
 
 # Queues
 
