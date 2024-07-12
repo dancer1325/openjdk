@@ -10,3 +10,9 @@ or either of these files:
 See <https://openjdk.org/> for more information about the OpenJDK
 Community and the JDK and see <https://bugs.openjdk.org> for JDK issue
 tracking.
+
+## Structure
+* "src/"
+  * source code of OpenJDK
+* "example/"
+  * examples following the "src/" hierarchical tree
