@@ -5,6 +5,7 @@
 * .jar
   * := file format / 
     * == .zip + optional .manifest
+      * .zip -- Check "java.util.zip" --
       * optional .manifest
         * uses
           * store meta-information about .jar
