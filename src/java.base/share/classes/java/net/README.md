@@ -17,7 +17,6 @@
         * subclasses
           * Inet4Address
           * Inet6Address
-            * 
     * _Sockets_
       * == bidirectional data communication mechanisms
         * == communication link between machine1 <-- over the network with --> machine2
