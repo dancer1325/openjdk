@@ -1,8 +1,9 @@
+//package example.java.base.share.classes.java.net;
 import java.net.URI;
 import java.net.URL;
 import java.io.InputStream;
 
-public class Example {
+public class NetPackageInfo {
     public static void main(String[] args) {
         try {
             URI uri = new URI("http://www.example.com/");
