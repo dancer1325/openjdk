@@ -32,4 +32,22 @@
       * == stream's elements -- are visited -- 1! | life of the stream
         * Reason: 🧠 once they are consumed (== terminal operations applied) -> NOT can be consumed /or read again  🧠
         * if you want to revisit the elements -> generate a new stream
-* TODO:
+  * ways to obtain
+    * `java.util.Collection`
+      * `.stream()`
+      * `.parallelStream()`
+    * `java.util.Arrays.stream(Object[])`
+    * static factory methods | stream classes
+      * `java.util.stream.Stream.of(Object[])`
+      * `java.util.stream.IntStream.range(int, int)`
+      * `java.util.stream.Stream.iterate(Object, UnaryOperator)`
+    * `BufferedReader.lines()`
+      * == lines of a file
+    * `java.nio.file.Files`
+    * `java.util.Random.ints()`
+    * stream-bearing methods in the JDK
+      * == methods / return streams
+      * `java.util.BitSet.stream()`
+      * `java.util.regex.Pattern.splitAsStream(java.lang.CharSequence)`
+      * `java.util.jar.JarFile.stream()`
+  * TODO:

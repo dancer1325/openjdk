@@ -1,0 +1,4 @@
+Hello, World!
+This is a test file.
+BufferedReader.lines() is very useful.
+Stream API makes handling files easier.
