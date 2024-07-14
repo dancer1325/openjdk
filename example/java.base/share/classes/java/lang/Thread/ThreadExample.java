@@ -1,4 +1,5 @@
-package share.classes.java.lang.Thread;
+//package share.classes.java.lang.Thread;
+// Remove it, to avoid being related to others -- TODO: Why if you add package -> dependency between other?
 
 import java.lang.Thread;
 import java.security.AccessControlContext;
