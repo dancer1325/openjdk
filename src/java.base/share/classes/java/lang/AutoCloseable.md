@@ -6,7 +6,7 @@
       * if the object `Autocloseable` is defined in the header of `try-with-resources` block & exiting of this block -> 👁️ this method is called automatically 👁️
         * -> allows
           * prompt release
-          * avoiding resource exhaustion exceptions
+          * avoiding resource exhaustion exceptions (?)
     * TODO:
   * uses
     * base class
