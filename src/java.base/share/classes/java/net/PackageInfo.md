@@ -1,5 +1,3 @@
-* Notes from 'package-info.java'
-
 * == classes / 
   * allows
     * implementing network applications
