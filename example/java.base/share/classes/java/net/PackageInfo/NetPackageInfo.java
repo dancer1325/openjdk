@@ -1,4 +1,4 @@
-//package example.java.base.share.classes.java.net;
+package share.classes.java.net.PackageInfo;//package example.java.base.share.classes.java.net;
 import java.net.URI;
 import java.net.URL;
 import java.io.InputStream;
