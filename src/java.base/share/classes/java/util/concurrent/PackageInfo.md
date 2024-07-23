@@ -36,6 +36,7 @@
         * queuing
         * scheduling
       * controlling shutdown
+      * arranging async execution of ANY function / -- expressed as -- `Callable`
   * subinterfaces
     * 'java.util.concurrent.ScheduledExecutorService'
       * := subinterface /
