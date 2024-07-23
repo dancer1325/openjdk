@@ -24,6 +24,11 @@ public class Main {
         // Do something else while the task is being executed
         System.out.println("Doing some other work while waiting for the task to complete...");
 
+        // 1. shutdown()        ALTHOUGH, it's added here, it waits for finish executing the taks ALREADY submitted
+        executorService.shutdown();
+        // 2. shutdownNow        NOT wait for terminate the tasks previously submitted
+        //executorService.shutdownNow();            Uncomment to check
+
         try {
             // Get the result of the task, waiting if necessary
             String result = futureResult.get();

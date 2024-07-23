@@ -1,5 +1,6 @@
 # Goals
-* TODO:
+* Check how to manage the termination -- `shutdown()` vs `shutdownNow()` --
+* `submit()` to create a `Future`
 
 ## How to run locally?
 * Place the cursor at package declaration
