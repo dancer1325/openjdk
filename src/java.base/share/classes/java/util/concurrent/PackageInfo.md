@@ -1,5 +1,3 @@
-* Notes from 'package-info.java'
-
 * == utility classes /
   * use
     * concurrent programming
@@ -52,9 +50,9 @@
         * -- returns the result
       * cancelling an execution
   * 'java.util.concurrent.RunnableFuture'
-    * := Future /
-      * characteristics
-        * there is a method / set results | it's execution
+    * := `Future` /
+      * `run()`
+        * method / set results | it's execution
 
 ## Implementations
 * TODO:
