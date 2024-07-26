@@ -6,6 +6,8 @@
       * consoles
       * files
       * sockets
+  * forwarding logged messages to -- variety of destinations
+    * _Example:_ consoles, files, OS logs, ..
 * exist variety of subclasses
   * built-in
   * TP
