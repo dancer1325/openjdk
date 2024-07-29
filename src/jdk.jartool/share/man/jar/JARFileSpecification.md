@@ -1,6 +1,6 @@
 # ".jar" specification
-* Information hosted in internet by Oracle -- https://docs.oracle.com/en/java/javase/XY/docs/specs/man/jar.html
-  * [Java SE 22](https://docs.oracle.com/en/java/javase/22/docs/specs/man/jar.html)
+* Information hosted in internet by Oracle -- https://docs.oracle.com/en/java/javase/XY/docs/specs/jar/jar.html
+  * [Java SE 22](https://docs.oracle.com/en/java/javase/22/docs/specs/jar/jar.html)
 * ".jar"
   * := file format / 
     * == ".zip" + optional /META-INF
