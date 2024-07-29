@@ -15,7 +15,15 @@
       * modify the operation
         * `-f FILE` or `--file=FILE`
           * specify the archive file name
+        * `-C DIR`
+          * specify the directory to generate the .jar
         * TODO:
+        * / ONLY valid in Create, Update modes
+          * `-m FILE or --manifest=FILE`
+            * from given manifest -- include the -- manifest information
+        * / ONLY valid in Create, Update, Generate-index modes
+          * `--date=TIMESTAMP`
+            * timestamp ISO-8601 | timestamps entries
 * := tool
   * general-purpose
     * archiving
