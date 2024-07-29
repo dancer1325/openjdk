@@ -7,6 +7,7 @@
       * -- based on -- ".zip"
     * uses
       * \>1 files -- are aggregated into -- 1!
+      * class path entry
     * 👁️NO restriction for naming 👁️
   * ways to create it
     * `jar ...` 
@@ -15,6 +16,9 @@
 * modular ".jar"
   * == ".jar" / contains "module-info.class" | root directory
   * explicit module := modular ".jar" / deployed | module path (!= class path)
+  * uses
+    * transportation
+    * deployment
 * non-modular ".jar"
   * automatic module := non-modular ".jar" /  deployed | module path (!= class path)
   * naming
