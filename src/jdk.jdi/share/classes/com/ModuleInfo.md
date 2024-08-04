@@ -20,6 +20,9 @@
       * suspend & resume threads
       * set breakpoints
   * highest layer of JPDA 
+* vs JDWP
+  * recommended to use JDI |
+    * debugger tools -- mainly, written in Java programming language --
 
 # jdb
 * := simple CL debugger
