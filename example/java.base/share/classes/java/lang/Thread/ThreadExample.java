@@ -1,4 +1,4 @@
-//package share.classes.java.lang.Thread;
+package share.classes.java.lang.Thread;
 // Remove it, to avoid being related to others -- TODO: Why if you add package -> dependency between other?
 
 import java.lang.Thread;
@@ -47,11 +47,11 @@ public class ThreadExample {
         // TODO: Add rest of constructors
 
         // 2. builder
-        // 2.1 ofVirtual()
-        Thread threadViaBuilder = Thread.ofVirtual()
+        // 2.1 ofVirtual()          -- Uncomment to use it
+        /*Thread threadViaBuilder = Thread.ofVirtual()
                 .name("Alfred")
                 .unstarted(task);
-        threadViaBuilder.start();
+        threadViaBuilder.start();*/
         // 2.2 OfPlatform()
         // TODO:
     }
