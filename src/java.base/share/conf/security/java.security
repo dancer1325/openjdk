@@ -49,7 +49,8 @@
 # requested). The order is 1-based; 1 is the most preferred, followed
 # by 2, and so on.
 #
-# <provName> must specify the name of the Provider as passed to its super
+# TODO:
+<provName> must specify the name of the Provider as passed to its super
 # class java.security.Provider constructor. This is for providers loaded
 # through the ServiceLoader mechanism.
 #
