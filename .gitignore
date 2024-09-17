@@ -22,3 +22,4 @@ NashornProfile.txt
 /.cache
 *.class
 /example/production/*
+/example/java.base/share/classes/java/security/cert/X509Certificate/sample.cer.txt
