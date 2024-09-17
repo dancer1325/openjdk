@@ -1,5 +1,5 @@
 * 👁️this is "master security properties file" 👁️
-  * if it fails to load -> JDK implementation throws unspecified erro | initializing "java.security.Security"
+  * if it fails to load -> JDK implementation throws unspecified error | initializing "java.security.Security"
   * 's properties
     * -- used by -- "java.security"
     * -- are parsed -- 1! time
