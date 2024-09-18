@@ -15,7 +15,12 @@ public class Main {
             X509Certificate cert = (X509Certificate) cf.generateCertificate(inStream);
 
             // Now you can use the cert object, e.g., print certificate details
-            System.out.println("Certificate Information: " + cert.toString());
+            System.out.println("-- X509Certificate.getSubjectX500Principal() --");
+            System.out.println(cert.getSubjectX500Principal());
+            System.out.println("-- X509Certificate.getIssuerX500Principal() --");
+            System.out.println(cert.getIssuerX500Principal());
+            System.out.println("-- ALL X509Certificate --");
+            System.out.println(cert.toString());
         } catch (Exception e) {
             e.printStackTrace();  // Handle any potential exceptions
         }
