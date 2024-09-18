@@ -15,6 +15,21 @@
 
 * TODO:
 
+## **CertPath Encodings**
+* uses
+  * `CertPath.getEncoded(encoding)`
+  * `CertificateFactory.generateCertPath(InputStream inStream, String encoding)`
+* `PKCS7`
+  * [syntax](https://www.rfc-editor.org/rfc/rfc2315.txt)
+  * signature & contents are ignored
+  * if NO certificates present -> `CertPath` / length=0
+  * NO maintain the order of certificates | `CertPath`
+    * == `CertPath` original order != `CertPath` converted to `PKCS7` encoded bytes & converter back, order  
+* `PkiPath`
+  * syntax
+    * ASN.1 DER encoded sequence of certificates / each certificate must be unique
+  * [X.509](https://www.itu.int/rec/T-REC-X.509/en)
+
 ## **CertPathBuilder Algorithms**
 * uses
   * generating an instance of `CertPathBuilder`
