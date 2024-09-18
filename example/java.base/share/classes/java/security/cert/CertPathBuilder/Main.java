@@ -25,6 +25,9 @@ public class Main {
         rc.setOptions(EnumSet.of(Option.PREFER_CRLS));
         params.addCertPathChecker(rc);
         CertPathBuilderResult cpbr = cpb.build(params);
+
+        CertPath certPath = cpbr.getCertPath();
+        System.out.println(certPath);
     }
 
     private static X509Certificate getTrustedCert() {
