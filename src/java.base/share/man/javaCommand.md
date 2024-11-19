@@ -69,3 +69,18 @@
           * Specifies the event setting value to modify. Use the form: <event-name>#<setting-name>=<value>
           * To add a new event setting, prefix the event name with '+'.
           * You can specify values for multiple event settings and .jfc options by separating them with a comma. In case of a conflict between a parameter and a .jfc option, the parameter will take precedence. The whitespace delimiter can be omitted for timespan values, i.e. 20ms. For more information about the settings syntax, see Javadoc of the jdk.jfr package.
+  * TODO:
+  * advanced Garbage Collection Options
+    * == java options /
+      * control how GC -- is performed by the -- Java HotSpot VM
+    * `-XX:MaxRAMPercentage=percent`
+      * MAXIMUM amount of memory / JVM -- may use for the -- Java heap | BEFORE applying ergonomics heuristics -- as a -- percentage of the maximum amount / determined as described in `-XX:MaxRAM`  
+      * 💡default value is 25% 💡
+      * if you specify this option & (this + other options / influence the MAXIMUM amount of memory) > compressed oops' range of memory addressable by -> disables automatic use of compressed oops 
+        * see `-XX:UseCompressedOops`
+      * _Example:_ set the % of maximum amount of memory / -- used for the -- Java heap
+        ```
+        -XX:MaxRAMPercentage=75
+        ```  
+    * TODO:
+      
