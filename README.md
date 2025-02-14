@@ -1,18 +1,12 @@
 # Welcome to the JDK!
 
-For build instructions please see the
-[online documentation](https://openjdk.org/groups/build/doc/building.html),
-or either of these files:
-
-- [doc/building.html](doc/building.html) (html version)
-- [doc/building.md](doc/building.md) (markdown version)
-
-See <https://openjdk.org/> for more information about the OpenJDK
-Community and the JDK and see <https://bugs.openjdk.org> for JDK issue
-tracking.
-
 ## Structure
-* "src/"
+* [src](src)
   * source code of OpenJDK
-* "example/"
+* [example/](example)
   * examples following the "src/" hierarchical tree
+* [doc](doc)
+  * Open JDK documentation
+
+## Other references
+* [OpenJDK main site](https://openjdk.org/)
