@@ -23,4 +23,12 @@
   * if you want to ADD -> `.getPublicCredentials().add(credential)`
 * `implements java.io.Serializable`
   * TODO:
+* `Subject(boolean readOnly, Set<? extends Principal> principals, Set<?> pubCredentials, Set<?> privCredentials) {}`
+  * create a `Subject` instance / copies the passed `principals`, `pubCredentials` & `privCredentials`
+  * `principals`
+    * if you want to modify it -> requires `AuthPermission("modifyPrincipals")` & `readOnly=false`
+  * `pubCredentials`
+    * if you want to modify it -> requires `AuthPermission("modifyPublicCredentials")` & `readOnly=false`
+  * `privCredentials`
+    * if you want to modify it -> requires `AuthPermission("modifyPrivateCredentials")` & `readOnly=false`
 * TODO:

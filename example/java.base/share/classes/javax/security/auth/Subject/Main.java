@@ -2,9 +2,11 @@ package share.classes.javax.security.auth.Subject;
 
 import javax.security.auth.Subject;
 import java.security.Principal;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+      // 0. new Subject()
       Subject subject = new Subject();
 
       // 1. principal
@@ -26,6 +28,11 @@ public class Main {
       subject.getPublicCredentials().add(userToken);
       System.out.println("subject.getPublicCredentials() " + subject.getPublicCredentials());   // way to ADD pubCredentials
 
+      // 3. new Subject(boolean readOnly, Set<? extends Principal> principals, Set<?> pubCredentials, Set<?> privCredentials) {}
+      Subject subjectWithArguments = new Subject(true, Set.of(principal), Set.of(userToken), Set.of(userToken));
+      System.out.println("subjectWithArguments " + subjectWithArguments);
+
+      //subjectWithArguments.getPrincipals().add(principal);   // ERROR, because subject instance is defined IMMUTABLE
       // TODO:
     }
 
