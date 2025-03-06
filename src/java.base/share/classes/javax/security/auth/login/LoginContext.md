@@ -26,10 +26,12 @@
     * if caller wants to logout -> invoke `logout()` 
 * `public void login() {}`
   * authenticate a `Subject`
-  * invokes the configured modules -- to perform -- their respective types of authentication (username/password, smart card pin verification, etc.)
+  * 👀invokes `.login()` / EACH `LoginModule` / configured | `new LoginContext(..., name, ...)` 👀
+    * EACH module -- perform -- their respective type of authentication (username/password, smart card pin verification, etc.)
+    * if MULTIPLE LoginModules fail -> exception is propagated -- through -- EACH `LoginModule`
+      * Reason: 🧠proper cleanup & state restoration 🧠
   * ❌if the authentication fails -> NO attempt authentication retries nor introduce delays ❌ 
   * if returns / NO throw an exception -> overall authentication succeeded
-  * TODO:
 * constructors
   * TODO:
 * TODO:
