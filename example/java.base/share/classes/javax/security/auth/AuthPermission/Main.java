@@ -1,0 +1,39 @@
+package share.classes.javax.security.auth.AuthPermission;
+
+import javax.security.auth.AuthPermission;
+import java.security.AccessController;
+import java.lang.SecurityManager;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+      // 0. new AuthPermission(String name)
+      AuthPermission authPermission = new AuthPermission("constructorWithName");
+      System.out.println("authPermission " + authPermission);
+        
+      // 1.     modifyPrincipals -
+      AuthPermission authPermissionModifyPrincipals = new AuthPermission("modifyPrincipals");
+      try {
+          // 1.1    check -- via -- SecurityManager
+          System.setSecurityManager(new SecurityManager());
+          SecurityManager sm = System.getSecurityManager();
+          System.out.println("SecurityManager " + sm);
+          if (sm != null) {
+              sm.checkPermission(authPermissionModifyPrincipals);
+              System.out.println("Permission granted to modify principals");
+          }
+          // 1.2    check -- via -- AccessController
+          /*AccessController.checkPermission(authPermissionModifyPrincipals);
+          System.out.println("Permission granted to modify principals");*/
+      } catch (Exception e) {
+          System.out.println("Permission NOT granted to modify principals");    // TODO: Fix, why NOT granted?
+      }
+
+
+      // 2.     modifyPublicCredentials -
+      // TODO:
+
+      // 3.     modifyPrivateCredentials -
+      // TODO:
+    }
+
+}
