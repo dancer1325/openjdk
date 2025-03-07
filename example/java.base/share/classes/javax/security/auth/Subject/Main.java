@@ -31,8 +31,8 @@ public class Main {
       // 3. new Subject(boolean readOnly, Set<? extends Principal> principals, Set<?> pubCredentials, Set<?> privCredentials) {}
       Subject subjectWithArguments = new Subject(true, Set.of(principal), Set.of(userToken), Set.of(userToken));
       System.out.println("subjectWithArguments " + subjectWithArguments);
-
       //subjectWithArguments.getPrincipals().add(principal);   // ERROR, because subject instance is defined IMMUTABLE
+
       // TODO:
     }
 
