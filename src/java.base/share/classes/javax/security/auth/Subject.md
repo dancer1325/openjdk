@@ -42,4 +42,23 @@
   * ⚠️if you set `true` -> NOT possible to set to `false` ⚠️
     * Reason: 🧠NO method to set it to `false` 🧠
   * TODO: "@throws SecurityException ..."
+* `<T extends Principal> Set<T> getPrincipals(Class<T> c) {}`
+  * return the `Set<T extends Principals>` / 
+    * -- associated with this -- `Subject`
+    * EACH method invocation
+      * == -- NOT affect the -- internal `Principal`
+* `<T> Set<T> getPublicCredentials(Class<T> c) {}`
+  * return the `Set<T>` /
+    * -- associated with this -- `Subject`
+    * EACH method invocation
+      * == -- NOT affect the -- internal `pubCredentials`
+* `<T> Set<T> getPrivateCredentials(Class<T> c) {}`
+  * return the `Set<T>` /
+    * -- associated with this -- `Subject`
+    * EACH method invocation
+      * == -- NOT affect the -- internal `privCredentials`
+  * if a security manager is installed & caller
+    * have a `PrivateCredentialPermission` / access all requested Credentials -> FINE
+    * NOT have a `PrivateCredentialPermission` -> throw a `SecurityException`
 * TODO:
+* 
