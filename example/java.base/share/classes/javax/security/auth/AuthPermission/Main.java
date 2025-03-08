@@ -34,6 +34,25 @@ public class Main {
 
       // 3.     modifyPrivateCredentials -
       // TODO:
+
+      // 4.     setReadOnly -
+        try {
+            AuthPermission readOnlyPermission = new AuthPermission("setReadOnly");
+
+            // Check if the current code has this permission
+            SecurityManager sm = System.getSecurityManager();
+            if (sm != null) {
+                sm.checkPermission(readOnlyPermission);
+                System.out.println("Permission granted to set Subject as read-only");
+            } else {
+                // Since SecurityManager is likely null in modern Java
+                System.out.println("SecurityManager is not enabled");
+            }
+
+        } catch (SecurityException e) {
+            System.out.println("Permission denied to set Subject as read-only: " + e.getMessage()); // TODO: Fix, why an error is thrown?
+        }
+
     }
 
 }

@@ -11,7 +11,7 @@
     * `getSubjectFromDomainCombiner -`
       * TODO:
     * `setReadOnly -`
-      * TODO:
+      * enable the caller -- to set a -- `Subject` / read-only
     * `modifyPrincipals -`
       * enable the 
         * the caller -- to modify the -- `Subject.principals`
