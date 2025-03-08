@@ -31,4 +31,15 @@
     * if you want to modify it -> requires `AuthPermission("modifyPublicCredentials")` & `readOnly=false`
   * `privCredentials`
     * if you want to modify it -> requires `AuthPermission("modifyPrivateCredentials")` & `readOnly=false`
+* `void setReadOnly() {}`
+  * NOT allowed modifying (add & remove)
+    * `Subject.principals`
+    * `Subject.pubCredentials`
+    * `Subject.privCredentials`
+  * if credentials implement `Destroyable` -> ⚠️allowed deletion of ⚠️
+    * `Subject.pubCredentials`
+    * `Subject.privCredentials`
+  * ⚠️if you set `true` -> NOT possible to set to `false` ⚠️
+    * Reason: 🧠NO method to set it to `false` 🧠
+  * TODO: "@throws SecurityException ..."
 * TODO:

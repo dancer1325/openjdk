@@ -1,6 +1,8 @@
 package share.classes.javax.security.auth.Subject;
 
 import javax.security.auth.Subject;
+import javax.security.auth.Destroyable;
+import javax.security.auth.DestroyFailedException;
 import java.security.Principal;
 import java.util.Set;
 
@@ -31,7 +33,32 @@ public class Main {
       // 3. new Subject(boolean readOnly, Set<? extends Principal> principals, Set<?> pubCredentials, Set<?> privCredentials) {}
       Subject subjectWithArguments = new Subject(true, Set.of(principal), Set.of(userToken), Set.of(userToken));
       System.out.println("subjectWithArguments " + subjectWithArguments);
-      //subjectWithArguments.getPrincipals().add(principal);   // ERROR, because subject instance is defined IMMUTABLE
+
+      // 4.     readOnly
+      // 4.1    NOT allowed modifying
+        try {
+            subjectWithArguments.getPrincipals().add(principal);   // ERROR, because NOT allowed adding Subject.principals
+        } catch (IllegalStateException e) {
+            System.out.println("subjectWithArguments.getPrincipals().add(principal) " + e.getMessage());
+        }
+
+        try {
+            subjectWithArguments.getPublicCredentials().add(userToken);   // ERROR, because NOT allowed adding Subject.pubCredentials
+        } catch (IllegalStateException e) {
+            System.out.println("subjectWithArguments.getPublicCredentials().add(userToken) " + e.getMessage());
+        }
+
+      // 4.2    allowed deletion
+      // 4.2.1      NOT if credentials do NOT implement Destroyable
+      // subjectWithArguments.getPublicCredentials().clear();       // ERROR
+      // 4.2.2      YES if credentials -- implement -- Destroyable
+      Subject subjectWithDestroyableCredentials = new Subject();
+      DestroyableCredential destroyableCredential = new DestroyableCredential();
+      subjectWithDestroyableCredentials.getPublicCredentials().add(destroyableCredential);
+      System.out.println("subjectWithDestroyableCredentials.getPublicCredentials() " + subjectWithDestroyableCredentials.getPublicCredentials());
+      subjectWithDestroyableCredentials.getPublicCredentials().remove(destroyableCredential);
+      System.out.println("subjectWithDestroyableCredentials.getPublicCredentials() " + subjectWithDestroyableCredentials.getPublicCredentials());
+      // NO publicCredentials
 
       // TODO:
     }
@@ -60,5 +87,24 @@ public class Main {
       public String toString() {
         return "UserToken{userId='" + userId + "', sessionId='" + sessionId + "'}";
       }
+    }
+
+    /**
+     * Credential class / implements Destroyable
+     */
+    static class DestroyableCredential implements Destroyable {
+        private boolean destroyed = false;
+
+        @Override
+        public void destroy() throws DestroyFailedException {
+            // Cleanup sensitive information
+            System.out.println("invoked destroy()");
+            destroyed = true;
+        }
+
+        @Override
+        public boolean isDestroyed() {
+            return destroyed;
+        }
     }
 }
