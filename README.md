@@ -7,6 +7,8 @@
   * examples following the "src/" hierarchical tree
 * [doc](doc)
   * Open JDK documentation
+* [jeps](jeps)
+  * JDK Enhancement Proposals
 
 ## Other references
 * [OpenJDK main site](https://openjdk.org/)
